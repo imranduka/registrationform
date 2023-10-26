@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@600&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    padding-bottom: 0px;
+    background: #eaeef2;
+    border: 1px solid #ccc;
+}
+
+
+header {
+    padding-top: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+
+}
+
+#description {
+    text-align: center;
+    font-size: 10px;
+}
+
+
+.field.input-field {
+    padding: 5px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.label-titles {
+    font-weight: bold;
+}
+
+.terms {
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.form-link {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #000080;
+    color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+#registerbtn {
+    background-color: #1f883d;
+    color: white;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.login-link {
+    color: #96DED1;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        /* Full width for smaller screens */
+    }
+
+    .field.input-field {
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+
+}
+
+#success-message {
+    padding: 50px;
+    background-color: white;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#passwordError {
+    font-size: 13px;
+    color: red;
+    display: block;
+    padding-left: 30px;
+    font-weight: bold;
+}
