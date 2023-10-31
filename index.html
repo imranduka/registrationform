@@ -10,63 +10,43 @@
 </head>
 
 <body>
-  <!-- Success message that is displayed when account is properly registered-->
+  <!-- Success message that is displayed when the account is properly registered-->
   <div id="success-message" style="display: none;">
     <p>You have successfully registered your account!</p>
   </div>
 
   <div class="container">
-
     <!-- Sign up title and description-->
-    <header>Sign up</header>
+    <h1>Sign up</h1>
     <p id="description">It's free and only takes a minute</p>
 
     <!-- Form initialization -->
     <form action="#" autocomplete="off">
-
       <!-- Input fields for user information -->
-      <div class="field input-field">
-
+      <div class="input-field">
         <label for="first-name" class="label-titles">First Name</label>
-        <input type="text" placeholder="Enter First Name" id="first-name" required>
-
+        <input type="text" placeholder="Enter First Name" id="first-name" class="inputs" required>
       </div>
-
-      <div class="field input-field">
-
+      <div class="input-field">
         <label for="last-name" class="label-titles">Last Name</label>
-        <input type="text" placeholder="Enter Last Name" id="last-name" required>
-
+        <input type="text" placeholder="Enter Last Name" id="last-name" class="inputs" required>
       </div>
-
-      <div class="field input-field">
-
+      <div class="input-field">
         <label for="email" class="label-titles">Email</label>
-        <input type="text" placeholder="Enter Email" id="email" required>
-
+        <input type="text" placeholder="Enter Email" id="email" class="inputs" required>
       </div>
-
-      <div class="field input-field">
-
+      <div class="input-field">
         <label for="password" class="label-titles">Password</label>
-        <input type="password" placeholder="Enter Password" id="password" required>
-
+        <input type="password" placeholder="Enter Password" id="password" class="inputs" required>
       </div>
-
-      <div class="field input-field">
-
+      <div class="input-field">
         <label for="confirm-password" class="label-titles">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" id="confirm-password" required>
-
+        <input type="password" placeholder="Confirm Password" id="confirm-password" class="inputs" required>
       </div>
-
-      <span id="passwordError" style="display: none;">Passwords do not match.</span>
-
-
-      <div class="field input-field">
-
+      <span id="passwordError" class="error" style="display: none;">Passwords do not match.</span>
+      <div class="input-field">
         <label for="country" class="label-titles">Country</label>
-        <select id="country" name="country" required>
+        <select id="country" name="country" class="inputs" required>
           <option value="" disabled selected>Select your country</option>
           <option value="usa">United States</option>
           <option value="canada">Canada</option>
@@ -74,37 +54,19 @@
           <option value="Pakistan">Pakistan</option>
           <!-- Add more countries as needed -->
         </select>
-
       </div>
-
-      <div class="field input-field">
-
-        <button type="submit" id="registerbtn" onclick="submitted()">Register</button>
-
-
+      <div class="input-field">
+        <button type="submit" id="registerbtn">Register</button>
       </div>
-
-
-
-
       <div class="terms">
-
         <p>By clicking the Sign Up button, you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy
             Policy</a>.</p>
-
       </div>
-
-
       <div class="form-link">
         <p>Already have an account? <a href="#" class="login-link">Login Here</a></p>
       </div>
-
     </form>
-
-
-
   </div>
-
 </body>
 
 </html>

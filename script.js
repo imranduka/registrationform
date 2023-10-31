@@ -1,31 +1,43 @@
-function submitted() {
-    // Get the registration form
-    var registrationForm = document.querySelector('form');
+document.addEventListener("DOMContentLoaded", function () {
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirm-password");
+    const passwordError = document.getElementById("passwordError");
 
-    // Get the values of password and confirm password fields
-    var password = document.getElementById("password").value;
-    var confirmPassword = document.getElementById("confirm-password").value;
+    function validatePassword() {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
 
-    // Get the error message element
-    var errorMessage = document.getElementById("passwordError");
-
-    // Check if the form is valid
-    if (registrationForm.checkValidity() == true) {
-        // Check if the passwords do not match
-        if (password != confirmPassword) {
-            errorMessage.style.display = 'block'; // Display the error message
-            return false; // Prevent form submission
+        if (password === confirmPassword) {
+            passwordError.style.display = "none";
+        } else {
+            passwordError.style.display = "block";
         }
-
-        // Get the success message element
-        var successMessage = document.getElementById("success-message");
-        successMessage.style.display = 'block'; // Display the success message
-
-        // Get the entire container and hide it
-        var entireContainer = document.querySelector('.container');
-        entireContainer.style.display = 'none';
     }
-    else {
-        return false; // Prevent form submission if the form is not valid
+
+    // Add an input event listener to both password fields
+
+    passwordInput.addEventListener("input", validatePassword);
+    confirmPasswordInput.addEventListener("input", validatePassword);
+
+
+
+
+    function handleFormSubmit() {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+        const successMessage = document.getElementById("success-message");
+        const entireContainer = document.querySelector('.container');
+        const form = document.querySelector('form');
+
+        // Check if all required fields are filled out and passwords match
+        if (form.checkValidity() && password === confirmPassword) {
+            successMessage.style.display = "block";
+            entireContainer.style.display = "none"; // Hide the container on successful submission
+        } else {
+            event.preventDefault(); // Prevent form submission if requirements are not met
+        }
     }
-}
+
+    // Add the event listener to the form
+    document.querySelector('form').addEventListener("submit", handleFormSubmit);
+});

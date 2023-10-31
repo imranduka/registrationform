@@ -28,7 +28,7 @@ body {
 }
 
 /* Styling for the registration form header */
-header {
+h1 {
     padding-top: 30px;
     font-size: 28px;
     font-weight: 600;
@@ -43,7 +43,7 @@ header {
 }
 
 /* Styling for input fields and labels */
-.field.input-field {
+.input-field {
     padding: 5px 30px;
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +61,11 @@ header {
     text-align: center;
     font-size: 12px;
     padding-bottom: 10px;
+}
+
+
+.inputs {
+    padding: 2px 0px
 }
 
 /* Styling for the login link at the bottom */
